@@ -1,14 +1,17 @@
 import express, { Application } from "express";
-
+import MongoService from "./services/MongoService";
 
 class AppInit {
     public port:number;
-    private app: Application;
+    public app: Application;
 
-    constructor(applicationInit:{port:number}) {
+    constructor(applicationInit:{port:number, services:[MongoService]}) {
         this.port = applicationInit.port
         this.app = express()
+        
     }
+
+   
 
     public runServer() {
         this.app.listen(this.port, () => {
