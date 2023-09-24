@@ -2,7 +2,7 @@ import mongoose, {Schema, Document, Model} from "mongoose"
 import { PostsInterface, Post } from "./PostsInterface"
 
 
-class PostsSchema {
+class PostsController {
     private singlePostSchema:Schema;
     private postsSchema: Schema;
     private model:Model<PostsInterface>;
@@ -43,4 +43,4 @@ class PostsSchema {
     
 }
 
-export default PostsSchema;
+export default PostsController;
