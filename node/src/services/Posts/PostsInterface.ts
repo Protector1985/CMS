@@ -1,6 +1,7 @@
 
 export interface Post {
-    identifier:string,
+    slug:string,
+    postNumber:number,
     post: string,
     category: string,
     styling: object,
