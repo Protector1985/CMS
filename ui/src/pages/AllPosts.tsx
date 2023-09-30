@@ -1,14 +1,21 @@
 import React from "react";
 import Table from "react-bootstrap/Table";
 import css from "../styles/allposts.module.css";
+import { useNavigate } from "react-router-dom";
 
 const AllPosts: React.FC = () => {
+  const navigate = useNavigate();
   return (
     <div className={css.wrapper}>
       <div className={css.pageHeadContainer}>
         <div className={css.headlineContainer}>
           <h1 className={css.headline}>Posts</h1>
-          <button className={css.newPostBtn}>New Post</button>
+          <button
+            onClick={() => navigate("/posts/createpost")}
+            className={css.newPostBtn}
+          >
+            New Post
+          </button>
         </div>
       </div>
 
