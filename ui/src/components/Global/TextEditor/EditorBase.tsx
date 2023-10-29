@@ -34,7 +34,7 @@ const EditorBase: React.FC = () => {
   
   const serializedHTML: React.ReactNode[] = value.map(serialize);
   const htmlString = ReactDOMServer.renderToStaticMarkup(<>{serializedHTML}</>);
-  console.log(htmlString)
+  
   //applies styling on tile click
   function activateStyling(e: any, type: Format) {
     e.preventDefault();
